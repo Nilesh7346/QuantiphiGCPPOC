@@ -1,18 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Http;
 
 namespace QuantiphiGCPPOC.Controllers
 {
-    public class HomeController : Controller
+    public class HelloController : ApiController
     {
-        public ActionResult Index()
+        // GET api/hello
+        [HttpGet]
+        public string Get()
         {
-            ViewBag.Title = "Home Page";
-
-            return View();
+            return "Hello";
         }
     }
 }
